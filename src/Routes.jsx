@@ -9,24 +9,15 @@ import BloggerDetails from "pages/BloggerDetails";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
-    { path: "*", element: <NotFound /> },
+    { path: "/dhiwise-dashboard", element: <Home /> },
+    { path: "/blogdetails", element: <BlogDetails /> },
+    { path: "/contactus", element: <ContactUs /> },
+    { path: "/bloggerdetails", element: <BloggerDetails /> },
     {
       path: "/",
       element: <LandingPage />,
     },
-    {
-      path: "blogdetails",
-      element: <BlogDetails />,
-    },
-    {
-      path: "contactus",
-      element: <ContactUs />,
-    },
-    {
-      path: "bloggerdetails",
-      element: <BloggerDetails />,
-    },
+    { path: "*", element: <NotFound /> },
   ]);
 
   return element;
